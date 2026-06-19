@@ -1,69 +1,158 @@
-# Projeto 2: Retenção de Clientes em Startup Tecnológica <br><br>
+# Análise de Retenção de Coorte: Uma Startup Não Atingiu PMF
 
-## Competências e Habilidades desenvolvidas:<br>
-🎯 **Organizar os dados em planilhas:** conhecer os diferentes tipos de dados que uma célula aceita e conseguir formatar moedas, datas, números para melhor visualizar as informações. Além disso, usar filtros para organizar os dados e poder ordenar as colunas do maior para o menor (ou vice-versa) de acordo com o tipo de dados.
+## 📊 A Pergunta
 
-🎯 **Manipular dados em planilhas:** usar tabelas dinâmicas para calcular, resumir e analisar dados para ver comparações, padrões e tendências neles. Além disso, poder conectar duas ou mais fontes de dados usando a função PROCV (VLOOKUP).
+**Triplicar o investimento em aquisição de usuários é uma boa estratégia quando uma startup enfrenta churn alto?**
 
-🎯 **Selecionar e filtrar dados usando Queries:** usar a fórmula QUERY para selecionar todas ou um subconjunto de colunas de uma fonte de dados. Além disso, filtrar essas informações de acordo com as características de algumas de suas colunas.
+A resposta é: **não, não é**.
 
-🎯 **Entender o conceito de Product Market Fit-PMF:** entender quando um produto ou serviço atingiu o PMF. Entender seu propósito e as repercussões de medir e monitorar essa métrica para o negócio. Conhecer as diferentes maneiras que existem para medi-lo.
+---
 
-🎯 **Realizar uma análise de coorte:** organizar as informações para formar coortes de clientes de acordo com a data de entrada no produto/serviço. Realizar cálculos e formatar as informações para encontrar mapas de calor. Identificar pontos de fuga.
+## 🎯 Por Que Isso Importa
 
-🎯 **Tomar decisões comerciais baseadas em dados:** resumir e organizar os dados de forma a encontrar informações importantes para apoiar uma decisão de negócios. Entender os prós e os contras de tal decisão e operar dentro de uma certa margem de erro.
-  
-## Ferramentas utilizadas: <br>
-![Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white)
+Muitas startups lidam com a pressão de crescer: "Vamos trazer mais usuários, mais rápido." Mas se os usuários existentes saem em massa, adicionar mais combustível ao fogo é desperdício.
 
-## Relatório de Análise: <br>
-📈 <a href="https://docs.google.com/spreadsheets/d/1y_iBEGvKWOPkftDI58K9R7JkfAqJfYX04fuWH_akWRI/edit?usp=sharing">Relatório no Sheets</a> 
+Este projeto demonstra como análise de coorte revela a verdade por trás dos números de superfície — e como esses insights devem informar decisões estratégicas.
 
-## Vìdeo de Apresentação dos Resultados: <br>
-📹 <a href="https://www.loom.com/share/aed2a60b097c417cb03b572d457c8529">Vídeo</a> 
+---
 
-## Objetivo da Análise: <br>
-🎯 Determinar se o investimento recebido será usado para "melhorar o produto" ou para "expandir, conquistando mais clientes", através da determinação do alcaçe ou não do Product-Market Fit através de uma análise de retenção de coorte.
+## 📈 O Que Fizemos
 
-## Etapas: <br>
-1️⃣ Importar e revisar o conjunto de dados
+Analisamos a base de **330 assinantes** de uma startup de serviços de assinatura, rastreando:
 
-2️⃣ Entender a estrutura dos dados
+- **Retenção mensal e trimestral** de cada coorte (grupos de usuários que entraram no mesmo período)
+- **Churn mensal e trimestral** (taxa de cancelamento)
+- **Trajetória de vida** de cada coorte ao longo de 8 trimestres (2019–2020)
 
-3️⃣ Resumir o total de clientes por mês
+**Metodologia:** Análise de coorte clássica com formatação condicional de cores (verde = bom, amarelo = atenção, vermelho = problema).
 
-4️⃣ Obter o número de clientes por mês 
+**Ferramentas:** Google Sheets com QUERY, PROCV, LINS, COLS e mapa de calor.
 
-5️⃣ Organizar dados | função Query e fórmula com PROCV, LINS e COLS
+---
 
-6️⃣ Calcular porcentagens e formatar | Formatação condicional, escala de cores e mapa de calor
+## 🔴 Os Achados Principais
 
-## Entregas e Conclusões: <br>
-📝**Porcentagem de retenção de clientes por mês**
-<br><img src="https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/1.retencao_mes.png"/><br>
+| Métrica | Valor | Interpretação |
+|---------|-------|----------------|
+| **Retenção T1 2019** | 97,87% | Entrada forte |
+| **Retenção T4 2020** | 51,35% | Queda de **46 pontos** em 12 meses |
+| **Estabilização** | T2 2020 em diante | Retenção "estanca" em ~51%, sem recuperação |
+| **Churn médio geral** | 36,36% | Mais de 1/3 dos assinantes cancela |
 
-📝**Porcentagem de retenção de clientes por trimestre**
-<br><img src="https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/2.retencao_trimestral.png"/><br>
+**O gráfico-chave:** A série temporal de retenção vs. churn mostra degradação consistente — não é um blip isolado, é um padrão sistemático de perda de confiança no produto.
 
-📝**Porcentagem de rotatividade / churn de clientes por mês**
-<br><img src="https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/3.churn_mensal.png"/><br>
+---
 
+## 💡 Conclusão Executiva
 
-📝**Porcentagem de rotatividade / churn de clientes por trimestre**
-<br><img src= "https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/4.churn_trimestral.png"/><br>
+### A startup **NÃO atingiu PMF** (Product-Market Fit)
 
-📝**Análise mês ou trimestre em que eles perderam mais clientes:** 
-O coorte com maior % de cancelamento foi mar/2022 ou mês 22, novamente próximo ao finalização do segundo ano. É necessário analisar o perfil dos assinantes que chegam nesse período e verificar por exemplose houve mudanças no seu perfil. Talvez o produto não atenda mais o perfil atual, Talvez houve finalização de alguma promoção ou Talvez seja o fim do período de permanência obrigatória. Verificar o perfil do assinante e do produto para o coorte dez/2019, pois deste coorte não houve nenhum cancelamento.
+Quando retenção cai 46 pontos percentuais em 12 meses e estabiliza em ~51%, isso sinaliza:
 
-📝**Como podemos ver no gráfico abaixo, a startup ainda não atingiu o PMF. Portanto, recomenda-se usar o investimento recebido na melhora do produto / serviço.**
-<br><img src= "https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/5.grafico_PMF.png"/><br>
+1. **Produto não resolve o problema adequadamente** para a maioria dos usuários
+2. **Valor percebido < custo da assinatura** — usuários acham mais fácil sair do que ficar
+3. **Expandir aquisição agora é um desperdício** — você estará trazendo mais pessoas para uma experiência que as faz sair
 
-## Dataset:
-💻 Os dados são públicos e fictícios<br>
-💻 Podem ser escontrados <a href="https://andrewchen.com/the-easiest-spreadsheet-for-churn-mrr-and-cohort-analysis-guest-post/">clicando aqui</a> <br>
+### ✅ Recomendação Estratégica:
 
-💻 Dataset mensal
-<br><img src= "https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/6.dataset_mensal.png"/><br>
+| ❌ Não Faça | ✅ Faça Primeiro |
+|------------|-----------------|
+| Triplicar investimento em aquisição | Investigar por que users saem (entrevistas, análise de perfil de churn) |
+| Escalar marketing agressivo | Melhorar o produto até retenção > 70% |
+| Expandir para novos mercados | Monitorar retenção como KPI central |
+| | Só depois que PMF estiver sólido, escalar aquisição |
 
-💻 Dataset trimestral
-<br><img src= "https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/7.dataset_trimestral.png"/><br>
+---
+
+## 📊 Visualizações Principais
+
+### Retenção Mensal
+![Retenção Mensal](https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/1.retencao_mes.png)
+
+### Retenção Trimestral
+![Retenção Trimestral](https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/2.retencao_trimestral.png)
+
+### Churn Mensal
+![Churn Mensal](https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/3.churn_mensal.png)
+
+### Churn Trimestral
+![Churn Trimestral](https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/4.churn_trimestral.png)
+
+### Retenção vs. Rotatividade (Série Temporal)
+![PMF](https://github.com/sthefcruz18/retencao-startup_IBM-LABORATORIA_P2/blob/3ee82f31056bc53f49d86c1858bc088da2827725/5.grafico_PMF.png)
+
+---
+
+## 🌍 Bridge to Education: Aplicando Análise de Retenção a Dados Educacionais
+
+Este projeto demonstra análise de coorte e retenção em contexto comercial. A mesma metodologia pode ser aplicada a dados educacionais para responder perguntas críticas em políticas públicas:
+
+- **Quais alunos persistem em cursos técnicos integrados ao ensino médio?**
+- **Que fatores predizem conclusão vs. evasão?**
+- **Como a oferta de EPT varia por região e impacta trajetórias de alunos?**
+
+Essas questões são centrais para o design de políticas de educação profissional baseadas em evidências. Os métodos usados aqui — **análise de coorte, taxas de retenção, segmentação de grupos** — são diretamente transferíveis a dados públicos educacionais (Censo Escolar, SAEB, microdados de secretarias estaduais).
+
+Assim como identificar "churn alto = não escale", na educação identificar "evasão alta = produto/oferta inadequados = antes de expandir, reformule".
+
+---
+
+## 📁 Como Reproduzir
+
+1. **Clone este repositório**
+   ```bash
+   git clone https://github.com/scruzdata18/retencao-startup_IBM-LABORATORIA_P2.git
+   ```
+
+2. **Abra o arquivo de análise**
+   - [Relatório no Google Sheets](https://docs.google.com/spreadsheets/d/1y_iBEGvKWOPkftDI58K9R7JkfAqJfYX04fuWH_akWRI/edit?usp=sharing)
+
+3. **Etapas de análise:**
+   - Importar e revisar dados
+   - Organizar em coortes por data de entrada
+   - Calcular retenção/churn mensal e trimestral
+   - Aplicar formatação condicional (mapa de calor)
+   - Identificar padrões de degradação
+
+---
+
+## 🎓 Competências Desenvolvidas
+
+✅ Organizar dados em planilhas (formatação, filtros, ordenação)  
+✅ Manipular dados com tabelas dinâmicas e conexão de fontes (PROCV, QUERY)  
+✅ Entender Product-Market Fit e suas repercussões  
+✅ Realizar análise de coorte com mapas de calor  
+✅ Tomar decisões comerciais baseadas em dados  
+
+---
+
+## 📊 Dataset
+
+- **Fonte:** [Andrew Chen - Cohort Analysis Spreadsheet](https://andrewchen.com/the-easiest-spreadsheet-for-churn-mrr-and-cohort-analysis-guest-post/)
+- **Tipo:** Dados fictícios públicos
+- **Período:** jan/2019 – dez/2020
+- **Assinantes:** 330 usuários
+
+---
+
+## 🎬 Apresentação
+
+📹 [Vídeo de Apresentação dos Resultados](https://www.loom.com/share/aed2a60b097c417cb03b572d457c8529)
+
+---
+
+## 📧 Contato
+
+**Sthefany Cruz**  
+Data Analyst | Ciência de Dados aplicada a Educação e Políticas Públicas  
+📧 [sthefcruz18@gmail.com](mailto:sthefcruz18@gmail.com)  
+🔗 [GitHub](https://github.com/scruzdata18) | [LinkedIn](https://www.linkedin.com/in/sthefcruz18/)
+
+---
+
+## 📚 Referências
+
+- Análise de coorte: [Understanding Cohort Analysis - Intercom](https://www.intercom.com/blog/cohort-analysis/)
+- Product-Market Fit: Sean Ellis, "Find Product/Market Fit"
+- Métricas SaaS: [SaaS Metrics 101 - Forecastly](https://www.forentrepreneurs.com/saas-metrics-2/)
+- Formação: Laboratoria + IBM — Certificação em Análise de Dados
